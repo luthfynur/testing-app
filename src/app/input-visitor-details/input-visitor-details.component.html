@@ -1,1 +1,17 @@
-<p>input-visitor-details works!</p>
+<h1>Input Visitor</h1>
+
+<div>
+  <form>
+    <label for="name">Nama</label>
+    <input [(ngModel)]="name" type="text" id="name" name="name" placeholder="Masukkan nama">
+
+    <label for="address">Alamat</label>
+    <input [(ngModel)]="phone" type="text" id="address" name="address" placeholder="Masukkan alamat">
+
+    <label for="phone">No.HP</label>
+    <input [(ngModel)]="address" type="text" id="phone" name="phone" placeholder="Masukkan No.HP">
+  
+    <button (click)="onSubmit()">Simpan</button>
+  </form>
+  <h3 *ngIf="message.length >0">{{message}}</h3>
+</div>

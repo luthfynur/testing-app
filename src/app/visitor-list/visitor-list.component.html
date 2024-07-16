@@ -1,1 +1,22 @@
-<p>visitor-list works!</p>
+<div>
+    <h1>Visitor List</h1>
+    <input type="text" placeholder="Cari visitor" (keyup.enter)="search($event.target.value)">
+    <table border="1" id="visitors">
+        <thead>
+          <tr>
+            <th>Nama</th>
+            <th>Alamat</th>
+            <th>No HP</th>
+            <th>Tanggal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let visitor of visitors">
+            <td>{{ visitor.name }}</td>
+            <td>{{ visitor.address }}</td>
+            <td>{{ visitor.phone }}</td>
+            <td>{{ formatDate(visitor.createdAt) }}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
